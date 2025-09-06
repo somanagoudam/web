@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t manjukolkar007/project-1 .'
+                sh 'docker build -t somanagoudam/project .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name c30 -p 9030:8080 manjukolkar007/project-1
+                docker run -it -d --name c30 -p 9030:8080 somanagoudam/project
                 '''
             }
         }
